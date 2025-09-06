@@ -22,7 +22,7 @@ public class Client {
     private double anualIncome;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "client")
+    @OneToMany(mappedBy = "client")
     private Order order;
 
 

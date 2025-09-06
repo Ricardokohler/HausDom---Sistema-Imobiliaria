@@ -21,14 +21,9 @@ public class Property {
     private String address;
     private double price;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "property")
+    @ManyToOne
+    @JoinColumn(name="order_id")
     private Order order;
 
-    public Property(Long id, String title, String address, double price) {
-        this.id = id;
-        this.title = title;
-        this.address = address;
-        this.price = price;
-    }
+
 }
